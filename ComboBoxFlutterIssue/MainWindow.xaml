@@ -6,13 +6,12 @@
         xmlns:local="clr-namespace:ComboBoxFlutterIssue"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="MainWindow" Width="200" Height="200" DataContext="{Binding RelativeSource={RelativeSource Self}}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         FontFamily="{StaticResource MaterialDesignFont}"
-        WindowStartupLocation="CenterScreen"
-        WindowState="Maximized"
+        ResizeMode="NoResize"
         WindowStyle="None">
     <materialDesign:DialogHost Identifier="RootDialog" CloseOnClickAway="True">
         <materialDesign:DrawerHost>

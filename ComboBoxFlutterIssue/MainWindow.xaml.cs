@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace ComboBoxFlutterIssue
 {
@@ -17,6 +19,12 @@ namespace ComboBoxFlutterIssue
         public MainWindow()
         {
             InitializeComponent();
+            Dispatcher.InvokeAsync(() =>
+            {
+                var workArea = SystemParameters.WorkArea;
+                Top = workArea.Height - Height;
+                Left = workArea.Width - Width;
+            }, DispatcherPriority.Background);
         }
 
         public SortBy SortBy { get; set; } = SortBy.Name;
